@@ -1,0 +1,31 @@
+#!/bin/bash
+
+git add .
+git commit -am "commit toughcloud gitbook `date +%Y-%m-%d" "%H:%M:%S`"
+git push  origin master
+
+
+gitbook build .
+#rm -rf /tmp/cloudbook
+if [ ! -d /tmp/cloudbook ]; then
+    mkdir -p /tmp/cloudbook
+    cp -rf _book/* /tmp/cloudbook
+    cp CNAME /tmp/cloudbook
+    cp -f favicon.ico /tmp/cloudbook/gitbook/images
+    cd /tmp/cloudbook
+    git init
+    git remote add origin git@git.coding.net:toughstruct/toughcloud-docs.git
+    git add .
+    git commit -am "deploy gitbook `date +%Y-%m-%d" "%H:%M:%S`"
+    git push -f origin master:coding-pages
+
+else
+    cp -rf _book/* /tmp/cloudbook
+    cp CNAME /tmp/cloudbook
+    cp -f favicon.ico /tmp/cloudbook/gitbook/images
+    cd /tmp/cloudbook
+    git add .
+    git commit -am "deploy gitbook `date +%Y-%m-%d" "%H:%M:%S`"
+    git push origin master:coding-pages
+fi
+
