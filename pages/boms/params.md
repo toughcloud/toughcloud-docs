@@ -24,7 +24,7 @@
 #### 短信设置
 ---
 
-![短信设置](http://qnstatic.toughcloud.net/FiIT8nQa6z2yDhAoiOkPFzHwJ0U7?imageView2/2/w/960/interlace/0/q/100)
+![短信设置](http://qnstatic.toughcloud.net/FiIT8nQa6z2yDhAoiOkPFzHwJ0U7?imageView2/2/w/1200/interlace/0/q/100)
 
 短信服务为系统提供到期通知，开户通知等服务，目前短信服务统一由硬派云短信网关提供服务。
 
