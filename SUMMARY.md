@@ -1,3 +1,4 @@
+- [产品更新日志](pages/changelog.md)
 - [常见问题](pages/faqs/index.md)
   - [硬派云提供哪些产品和服务](pages/faqs/services.md)
   - [设备对接常见问题](pages/faqs/nas_faq.md)
