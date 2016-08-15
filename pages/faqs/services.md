@@ -1,5 +1,8 @@
 # 硬派云提供哪些产品和服务
 
+![硬派云](http://qnstatic.toughcloud.net/FhPWkv-VqL_OQhmm627qMMHiFbcC)
+
+
 ### 专业 Radius 认证计费引擎
 
 硬派云计费引擎基于开源计费系统 TOUGHRADIUS 核心 Radius 模块，针对云端特点深度定制，提供完整的AAA实现，具备高扩展性，高性能，高可用性的特点，硬派云认证计费引擎以分布式模式部署于云端，可支持同时上千个节点提供服务负载。
