@@ -13,6 +13,7 @@
   - [修改操作员密码](pages/boms/modpwd.md)
   - [操作日志查询](pages/boms/opslog.md)
   - [日志消息跟踪](pages/boms/logtrace.md)
+- [网络专线计费运营管理](pages/pns/toughpns.md)
 - [范例参考](pages/example/index.md)
   - [RouterOS 对接实现 PPPOE 计费](pages/example/routeros_pppoe_example.md)
   - [RouterOS 对接实现无线认证](pages/example/routeros_wlan_example.md)
