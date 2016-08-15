@@ -14,15 +14,21 @@
 
 ## 目录索引
 
-- [常见问题](pages/faqs.md)
+- [常见问题](pages/faqs/index.md)
+  - [硬派云提供哪些产品和服务](pages/faqs/services.md)
+  - [设备对接常见问题](pages/faqs/nas_faq.md)
 - [客户账号管理](pages/customer/index.md)
   - [硬派云账号注册流程](pages/customer/regflow.md)
   - [硬派云账号设置](pages/customer/settings.md)
   - [硬派云账号充值与交易查询](pages/customer/order.md)
 - [使用硬派云代理对接本地路由设备](pages/cloudagent.md)
 - [综合网络计费运营](pages/boms/index.md)
+  - [如何登录计费管理系统](pages/boms/login.md) 
   - [系统参数管理](pages/boms/params.md)
   - [操作员与权限管理](pages/boms/opr.md)
+  - [修改操作员密码](pages/boms/modpwd.md)
+  - [操作日志查询](pages/boms/opslog.md)
+  - [日志消息跟踪](pages/boms/logtrace.md)
 - [范例参考](pages/example/index.md)
   - [RouterOS 对接实现 PPPOE 计费](pages/example/routeros_pppoe_example.md)
   - [RouterOS 对接实现无线认证](pages/example/routeros_wlan_example.md)
@@ -30,5 +36,4 @@
   - [服务商接入设备接口](pages/api/nas.md)
   - [RADIUS 用户接口](pages/api/user.md)
   - [Radius 在线用户接口](pages/api/online.md)
-
 
