@@ -12,9 +12,9 @@
 
 进入区域管理界面，新建一个区域
 
-![区域管理](http://upload-images.jianshu.io/upload_images/2244298-022e040931239bde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![区域管理](http://qnstatic.toughcloud.net/FtLiJChYT7DbkaI6XP41Pf02_0nS)
 
-![社区管理](http://upload-images.jianshu.io/upload_images/2244298-fcab3cc356142090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![社区管理](http://qnstatic.toughcloud.net/Fq9ZYrb033ZH4omwuEPfN2lb-fb_)
 
 ### 2. 设置接入设备
 - 接入设备地址：目前云端暂时不需要以 IP 作为接入鉴别，填写0.0.0.0。
@@ -29,10 +29,10 @@
 - 最大会话时长：用户上线后多长时间会断开。
 
 
-![创建接入设备](http://upload-images.jianshu.io/upload_images/2244298-095c4cf4a53b8cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![创建接入设备](http://qnstatic.toughcloud.net/FotMOj-jIN5ru4Z6WOAmc3pO5ZrU)
 
 
-![接入设备列表](http://upload-images.jianshu.io/upload_images/2244298-ee16920dbac39d18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![接入设备列表](http://qnstatic.toughcloud.net/FgvVUN_AgLUjIhEwXjOHlCG-QRAR)
 
 ### 3. 创建资费
 
@@ -48,28 +48,28 @@
 
 > 免费授权模式：当用户订购资费过期，或余额，流量不足时，如果该资费允许到期免费授权，则用户可以继续认证接入，同时下发免费授权模式下的低速限速模式。
 
-![创建资费](http://upload-images.jianshu.io/upload_images/2244298-27b7ef36e5a10242.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![创建资费](http://qnstatic.toughcloud.net/FotnzTjp0Ocqakd3ar8ZpqJh0DRn)
 
-![资费套餐](http://upload-images.jianshu.io/upload_images/2244298-234811625f7bf49b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![资费套餐](http://qnstatic.toughcloud.net/FnLqYFyzfGnAWYwmVxlojbxNyJY7)
 
 ### 4. 创建认证用户
 
-![创建认证用户](http://upload-images.jianshu.io/upload_images/2244298-16af9b36e4d1f386.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![创建认证用户](http://qnstatic.toughcloud.net/FgYhp952IqiduzESF-aAJHmggDAg)
 
 
-![认证用户列表](http://upload-images.jianshu.io/upload_images/2244298-1cce5d4b1ac71b8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证用户列表](http://qnstatic.toughcloud.net/FoCyqTvQ2OcLB-f049VdhL5jp5Ps)
 
 
 ## 二. RouterOS 设备配置
 
 ### 1. Radius 服务设置
 
-![Radius 列表](http://upload-images.jianshu.io/upload_images/2244298-1cd7e99b138b1e43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 列表](http://qnstatic.toughcloud.net/FseQ4YVut2-HwAkkk08xV298uexG)
 
-![Radius 服务配置](http://upload-images.jianshu.io/upload_images/2244298-ad95c7fd41df4ae3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 服务配置](http://qnstatic.toughcloud.net/FnYLxCpfwwPBU5Xw-a3kbwjpukg6)
 
 
-![Radius 授权端口配置](http://upload-images.jianshu.io/upload_images/2244298-ea815bc205f44205.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 授权端口配置](http://qnstatic.toughcloud.net/FtWlDQUuxrUItJYpC8JPbbut6yIL)
 
 
 
@@ -77,10 +77,10 @@
 
 >  注意：不选择 mschapv1，另外，你可能还需要进一步根据需要配置 RouterOS，比如地址池的分配等。
 
-![PPPOE 服务配置](http://upload-images.jianshu.io/upload_images/2244298-ebf3cc60a1edb653.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![PPPOE 服务配置](http://qnstatic.toughcloud.net/FqtSbgNwf0h5Y1Sd6Gl6XXDzpkKc)
 
 
-![认证记账设置](http://upload-images.jianshu.io/upload_images/2244298-e9c520124c4f1e1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证记账设置](http://qnstatic.toughcloud.net/Fvoi-TRvx4GF2rEIdl0xtdncAald)
 
 > 与硬派云对接，无需设置 Interim Update 的间隔值，因为该值是通过硬派云 Radius 协议来控制的，根据接入设备的定义来控制用户间隔周期。
 
@@ -88,7 +88,9 @@
 
 完成以上两大步，我们就可以开始我们的认证测试了，当然记得把你的路由插上电源和网线，物理设施部署必须就位。
 
-![windows 拨号认证](http://upload-images.jianshu.io/upload_images/2244298-fe5749111e02dd0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![windows 拨号认证](http://qnstatic.toughcloud.net/Ft4U6mde0ILNUAbuGMIE3NITvP7L)
 
 
-![认证成功](http://upload-images.jianshu.io/upload_images/2244298-4b67f3981299630e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证成功](http://qnstatic.toughcloud.net/Fp5CbC4_EPfPdRDhKxqeF2zrbDFv)
+
+
