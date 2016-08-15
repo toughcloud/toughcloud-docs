@@ -88,9 +88,9 @@
 
 完成以上两大步，我们就可以开始我们的认证测试了，当然记得把你的路由插上电源和网线，物理设施部署必须就位。
 
-![windows 拨号认证](http://qnstatic.toughcloud.net/Ft4U6mde0ILNUAbuGMIE3NITvP7L)
+![windows 拨号认证](http://qnstatic.toughcloud.net/Ft4U6mde0ILNUAbuGMIE3NITvP7L?imageView2/2/w/480/interlace/0/q/100)
 
 
-![认证成功](http://qnstatic.toughcloud.net/Fp5CbC4_EPfPdRDhKxqeF2zrbDFv)
+![认证成功](http://qnstatic.toughcloud.net/Fp5CbC4_EPfPdRDhKxqeF2zrbDFv?imageView2/2/w/480/interlace/0/q/100)
 
 

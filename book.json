@@ -9,6 +9,9 @@
         "prism",
         "-highlight"
     ],
+    "style":{
+        "website":"styles/website.css"
+    },
     "pluginsConfig": {},
     "variables": {},
     "links": {

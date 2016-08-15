@@ -12,9 +12,9 @@
 
 进入区域管理界面，新建一个区域
 
-![区域管理](http://upload-images.jianshu.io/upload_images/2244298-022e040931239bde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![区域管理](http://qnstatic.toughcloud.net/FtLiJChYT7DbkaI6XP41Pf02_0nS)
 
-![社区管理](http://upload-images.jianshu.io/upload_images/2244298-fcab3cc356142090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![社区管理](http://qnstatic.toughcloud.net/Fq9ZYrb033ZH4omwuEPfN2lb-fb_)
 
 ### 2. 设置接入设备
 - 接入设备地址：如果设备不是公网 ip，填写0.0.0.0。
@@ -29,28 +29,28 @@
 - 最大会话时长：用户上线后多长时间会断开。
 
 
-![创建接入设备](http://upload-images.jianshu.io/upload_images/2244298-095c4cf4a53b8cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![创建接入设备](http://qnstatic.toughcloud.net/FotMOj-jIN5ru4Z6WOAmc3pO5ZrU)
 
 
-![接入设备列表](http://upload-images.jianshu.io/upload_images/2244298-ee16920dbac39d18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![接入设备列表](http://qnstatic.toughcloud.net/FgvVUN_AgLUjIhEwXjOHlCG-QRAR)
 
 ### 3. 设置无线认证域
 
 一个认证域相当于一个群组，在这个域里面可以纳入 AP 节点的认证管理。每个域可以绑定一个 portal 模板，通过对模板的定制可以实现个性化的认证门户界面。
 
-![创建无线认证域](http://upload-images.jianshu.io/upload_images/2244298-80c0c45293e56a9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![创建无线认证域](http://qnstatic.toughcloud.net/FsRs7Y1sWlwuBzmrWsonI63GAr6I)
 
-![认证域列表](http://upload-images.jianshu.io/upload_images/2244298-26e43623ab2662c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证域列表](http://qnstatic.toughcloud.net/Fl5GRSvqtnr0mndAkjPwX55gMMFQ)
 
 进一步对认证域进行设置，每个域可以设置一组扩展属性，这些属性会因接入设备的不同而不同，其中包含一些预置的公共属性。对扩展属性的设置，我们将会额外提供更详细的文档说明。
 
 每个域下可以加入不限数量的 AP 节点，每个 AP 节点会提供一个全局唯一标识 guid。
 
-![认证域设置](http://upload-images.jianshu.io/upload_images/2244298-24f253dea75d6c34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证域设置](http://qnstatic.toughcloud.net/Fj4aba3toKzlgjofPAk7uC5Fq-v9)
 
 预览下效果
 
-![模板预览](http://upload-images.jianshu.io/upload_images/2244298-96613d96d5fe963d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![模板预览](http://qnstatic.toughcloud.net/Fm1ZhdAEGZl18GdXXJPut9KnA4vi)
 
 ### 4. 设置无线认证资费
 
@@ -60,30 +60,30 @@
 
 > 注意：对于热点自动注册的用户，包月时段类型只会提供一天的有效期，如果用户下次认证再次验证短信，微信等可以再次续费一天的有效期，即每个自动注册的用户可以免费上网一天。对于流量或时长，每次重新验证会重置流量和时长。
 
-![热点自动注册资费](http://upload-images.jianshu.io/upload_images/2244298-16e829d0b1e8a226.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![热点自动注册资费](http://qnstatic.toughcloud.net/Fg0wSHcaGVsr76Rj11qOyQ52LhW3)
 
-![资费列表](http://upload-images.jianshu.io/upload_images/2244298-ee058aca72b8ce30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![资费列表](http://qnstatic.toughcloud.net/Fkdc54xytJJg_sYPyZ98XpwY6_9b)
 
 在系统参数管理界面设置全局热点资费
 
-![设置全局资费](http://upload-images.jianshu.io/upload_images/2244298-aaecb91162fb20b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![设置全局资费](http://qnstatic.toughcloud.net/Fj3VdrRr6M_LwwydbhHS7gBdJslz)
 
 ## 二. RouterOS 设备配置
 
 ### 1. 地址池设置
-![IP 地址池设置](http://upload-images.jianshu.io/upload_images/2244298-e8ff6a47353244ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![IP 地址池设置](http://qnstatic.toughcloud.net/FstCGxv_zqfWabGmCkOOg6iBuQgM)
 
 ### 2. Hotspot 服务器设置
-![Hotspot 服务器配置](http://upload-images.jianshu.io/upload_images/2244298-f98b509c276cff68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Hotspot 服务器配置](http://qnstatic.toughcloud.net/FruzalByBwMMFQVS2L3U41YzESIs)
 
 
-![Hotspot  Server profile 设置](http://upload-images.jianshu.io/upload_images/2244298-c6f265a37bae1ffc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Hotspot  Server profile 设置](http://qnstatic.toughcloud.net/FgAcZNSpqJkd4KpND--04NkBNJ-o)
 
 ### 3. 认证模板设置
 
 你可能注意到了我们使用到了定制的模板
 
-![定制模板](http://upload-images.jianshu.io/upload_images/2244298-5d928b5f29792ef6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![定制模板](http://qnstatic.toughcloud.net/FkIy1ifDx6LBCGQ99me0CymEI8-9)
 
 toughcloud 模板目录主要包含以下几个文件
 
@@ -180,18 +180,17 @@ rstatus.html
 
 ### 4. Radius 服务设置
 
-![Radius 列表](http://upload-images.jianshu.io/upload_images/2244298-1cd7e99b138b1e43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 列表](http://qnstatic.toughcloud.net/FseQ4YVut2-HwAkkk08xV298uexG)
 
-![Radius 服务配置](http://upload-images.jianshu.io/upload_images/2244298-ad95c7fd41df4ae3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 服务配置](http://qnstatic.toughcloud.net/FnYLxCpfwwPBU5Xw-a3kbwjpukg6)
 
-
-![Radius 授权端口配置](http://upload-images.jianshu.io/upload_images/2244298-ea815bc205f44205.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Radius 授权端口配置](http://qnstatic.toughcloud.net/FtWlDQUuxrUItJYpC8JPbbut6yIL)
 
 ### 5. 免认证列表
 
-![管理地址免认证](http://upload-images.jianshu.io/upload_images/2244298-0e63b0dcc00964f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![管理地址免认证](http://qnstatic.toughcloud.net/FiGKulbqa4La9KgDF4jm82zdgMW1)
 
-![免授权访问资源](http://upload-images.jianshu.io/upload_images/2244298-4dd15157b4bf7534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![免授权访问资源](http://qnstatic.toughcloud.net/Flr0hiexl0Yqeb87zP8egA6CYk5i)
 
 ## 三. 开始正式测试
 
@@ -199,20 +198,20 @@ rstatus.html
 
 连上WiFi 试试吧
 
-![连接 WiFi](http://upload-images.jianshu.io/upload_images/2244298-7266596dcff364dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![连接 WiFi](http://qnstatic.toughcloud.net/Fq4-YOjTbYLmP71zlkGGOM3FOrXt?imageView2/2/w/480/interlace/0/q/100)
 
 界面出来了，什么，还需要密码，让我短信验证试试看。
 
 >友情提示，短信发送由硬派云网关统一提供，您需要根据使用量购买短信服务包，当然价格便宜的都不好意思说
 
-![认证界面](http://upload-images.jianshu.io/upload_images/2244298-1a74ed35e4077c70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证界面](http://qnstatic.toughcloud.net/FicmKHfrtp9Hpm_QcxHhaYGtp8ic?imageView2/2/w/480/interlace/0/q/100)
 
 不是骗人的，密码发来了
 
-![短信验证](http://upload-images.jianshu.io/upload_images/2244298-82512af1de720f4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![短信验证](http://qnstatic.toughcloud.net/FkERJE4cS21JOsOPkiIeCAEWm2B8?imageView2/2/w/480/interlace/0/q/100)
 
 啊哈，连上网络啦
 
-![认证成功](http://upload-images.jianshu.io/upload_images/2244298-d2b0e0ea7fb70654.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![认证成功](http://qnstatic.toughcloud.net/FvK5Cawb7yGaiIXlBwyFhWyDEB47?imageView2/2/w/480/interlace/0/q/100)
 
 不说了，我要用着免费的 WiFi 看个剧先。
