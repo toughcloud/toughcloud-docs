@@ -15,7 +15,7 @@ TOUGHPNS管理系统适用于VPN(虚拟专网)的接入运营与管理业务；�
 ![TOUGHPNS系统登陆页面](http://qnstatic.toughcloud.net/Fgw5ZDo02Pas-xNNIbLG9tEysuU6)
 
 ### 2、配置你的网络接入设备
-登陆成功首页会显示你的基本信息和硬派云服务相关信息，同时列出可用的RADIUS引擎信息，你可以根据引擎信息配置你的网络接入设备上的RADIUS信息，如果你使用的是RouterOS参见[【RouterOS 与硬派云对接实现 PPPOE 计费】](../pages/example/routeros_pppoe_example.md)中第二步的RouterOS 设备配置。
+登陆成功首页会显示你的基本信息和硬派云服务相关信息，同时列出可用的RADIUS引擎信息，你可以根据引擎信息配置你的网络接入设备上的RADIUS信息，如果你使用的是RouterOS参见[【RouterOS 与硬派云对接实现 PPPOE 计费】](../example/routeros_pppoe_example.md)中第二步的RouterOS 设备配置。
 ![系统首页](http://qnstatic.toughcloud.net/Fs7hUTD8N0QIvc8aoOqpb27jSiuV)
 
 ###3、配置系统相关参数
