@@ -1,4 +1,6 @@
-- [常见问题](pages/faqs.md)
+- [常见问题](pages/faqs/index.md)
+  - [硬派云提供哪些产品和服务](pages/faqs/services.md)
+  - [设备对接常见问题](pages/faqs/nas_faq.md)
 - [客户账号管理](pages/customer/index.md)
   - [硬派云账号注册流程](pages/customer/regflow.md)
   - [硬派云账号设置](pages/customer/settings.md)
