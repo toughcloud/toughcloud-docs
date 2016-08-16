@@ -14,13 +14,17 @@
 
 ## 目录索引
 
+- [产品更新日志](pages/changelog.md)
 - [常见问题](pages/faqs/index.md)
   - [硬派云提供哪些产品和服务](pages/faqs/services.md)
   - [设备对接常见问题](pages/faqs/nas_faq.md)
+  - [RouterOS 对接常见问题](pages/faqs/routeros.md)
 - [客户账号管理](pages/customer/index.md)
   - [硬派云账号注册流程](pages/customer/regflow.md)
   - [硬派云账号设置](pages/customer/settings.md)
+  - [硬派云服务订购流程](pages/customer/service.md)
   - [硬派云账号充值与交易查询](pages/customer/order.md)
+  - [硬派云通知服务](pages/customer/notify.md)
 - [使用硬派云代理对接本地路由设备](pages/cloudagent.md)
 - [综合网络计费运营](pages/boms/index.md)
   - [如何登录计费管理系统](pages/boms/login.md) 
@@ -29,6 +33,10 @@
   - [修改操作员密码](pages/boms/modpwd.md)
   - [操作日志查询](pages/boms/opslog.md)
   - [日志消息跟踪](pages/boms/logtrace.md)
+  - [区域社区管理](pages/boms/node.md)
+  - [接入设备管理](pages/boms/nas.md)
+  - [资费套餐管理](pages/boms/product.md)
+- [网络专线计费运营管理](pages/pns/toughpns.md)
 - [范例参考](pages/example/index.md)
   - [RouterOS 对接实现 PPPOE 计费](pages/example/routeros_pppoe_example.md)
   - [RouterOS 对接实现无线认证](pages/example/routeros_wlan_example.md)
