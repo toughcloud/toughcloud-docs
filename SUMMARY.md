@@ -22,6 +22,7 @@
   - [资费套餐管理](pages/boms/product.md)
   - [用户信息管理](pages/boms/user.md)
   - [用户快速开户](pages/boms/useropen.md)
+  - [微信公众号自助服务](pages/boms/mps.md)
 - [网络专线计费运营管理](pages/pns/toughpns.md)
 - [范例参考](pages/example/index.md)
   - [RouterOS 对接实现 PPPOE 计费](pages/example/routeros_pppoe_example.md)
