@@ -8,6 +8,7 @@
   - [硬派云账号设置](pages/customer/settings.md)
   - [硬派云服务订购流程](pages/customer/service.md)
   - [硬派云账号充值与交易查询](pages/customer/order.md)
+  - [礼品券充值](pages/customer/giftcard.md)
   - [硬派云通知服务](pages/customer/notify.md)
 - [使用硬派云代理对接本地路由设备](pages/cloudagent.md)
 - [综合网络计费运营](pages/boms/index.md)
