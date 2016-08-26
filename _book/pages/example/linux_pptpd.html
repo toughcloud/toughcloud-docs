@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>操作员与权限管理 | 硬派云用户文档</title>
+        <title>Linux pptpd 对接实现 VPN 认证 | 硬派云用户文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -31,10 +31,10 @@
         
     
     
-    <link rel="next" href="../../pages/boms/modpwd.html" />
+    <link rel="next" href="../../pages/api/index.html" />
     
     
-    <link rel="prev" href="../../pages/boms/params.html" />
+    <link rel="prev" href="../../pages/example/routeros_wlan_example.html" />
     
 
         
@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="5.3" data-basepath="../.." data-revision="Fri Aug 26 2016 15:07:30 GMT+0800 (CST)">
+    <div class="book" data-level="7.3" data-basepath="../.." data-revision="Fri Aug 26 2016 15:07:30 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -318,7 +318,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.3" data-path="pages/boms/opr.html">
+        <li class="chapter " data-level="5.3" data-path="pages/boms/opr.html">
             
                 
                     <a href="../../pages/boms/opr.html">
@@ -534,7 +534,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="pages/example/linux_pptpd.html">
+        <li class="chapter active" data-level="7.3" data-path="pages/example/linux_pptpd.html">
             
                 
                     <a href="../../pages/example/linux_pptpd.html">
@@ -726,23 +726,104 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E6%93%8D%E4%BD%9C%E5%91%98%E4%B8%8E%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86">&#x64CD;&#x4F5C;&#x5458;&#x4E0E;&#x6743;&#x9650;&#x7BA1;&#x7406;</h1>
-<p><img src="http://qnstatic.toughcloud.net/FqG3VZPNnRuQmq4a5BaImGtWSuNW" alt="&#x64CD;&#x4F5C;&#x5458;&#x5217;&#x8868;"></p>
-<p>&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x4E3A;&#x786C;&#x6D3E;&#x4E91;&#x5BA2;&#x6237;&#x8D26;&#x53F7;&#xFF0C;&#x5BC6;&#x7801;&#x5373;&#x786C;&#x6D3E;&#x4E91;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x62E5;&#x6709;&#x7CFB;&#x7EDF;&#x6240;&#x6709;&#x6743;&#x9650;&#xFF0C;&#x4E0B;&#x7EA7;&#x64CD;&#x4F5C;&#x5458;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x66F4;&#x6539;&#x53EA;&#x80FD;&#x7531;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x5B8C;&#x6210;&#x3002;</p>
-<h2 id="%E5%88%9B%E5%BB%BA%E6%93%8D%E4%BD%9C%E5%91%98">&#x521B;&#x5EFA;&#x64CD;&#x4F5C;&#x5458;</h2>
-<hr>
-<p><img src="http://qnstatic.toughcloud.net/Fm_pOB-Zqo--ApJffjYTo9zhm6og" alt="&#x521B;&#x5EFA;&#x64CD;&#x4F5C;&#x5458;"></p>
-<p><img src="http://qnstatic.toughcloud.net/FukMvDiG7-y_HQxUdmf8PTH_zs5O" alt="&#x6743;&#x9650;&#x5206;&#x914D;"></p>
-<p>&#x6839;&#x636E;&#x64CD;&#x4F5C;&#x5458;&#x7684;&#x4E1A;&#x52A1;&#x8303;&#x56F4;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5206;&#x914D;&#x76F8;&#x5173;&#x7684;&#x6743;&#x9650;&#x5373;&#x53EF;&#x3002;</p>
-<h2 id="%E4%BF%AE%E6%94%B9%E6%93%8D%E4%BD%9C%E5%91%98">&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x5458;</h2>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x94FE;&#x63A5;&#x8FDB;&#x5165;&#x64CD;&#x4F5C;&#x5458;&#x4FEE;&#x6539;&#x754C;&#x9762;&#xFF0C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x5458;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x6743;&#x9650;&#x3002;</p>
-<p><img src="http://qnstatic.toughcloud.net/FpcWyKdRRVh21CmR7jtgAnBJhV2Y" alt="&#x64CD;&#x4F5C;&#x5458;&#x4FEE;&#x6539;"></p>
-<p>&#x64CD;&#x4F5C;&#x5458;&#x540D;&#x79F0;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x3002;</p>
-<p><img src="http://qnstatic.toughcloud.net/FpwvtgEupcaaKkH_dHoZmSctKa55" alt="&#x64CD;&#x4F5C;&#x5458;&#x4FEE;&#x6539;"></p>
-<h2 id="%E6%93%8D%E4%BD%9C%E5%91%98%E5%88%A0%E9%99%A4%E4%B8%8E%E5%81%9C%E7%94%A8">&#x64CD;&#x4F5C;&#x5458;&#x5220;&#x9664;&#x4E0E;&#x505C;&#x7528;</h2>
-<p>&#x70B9;&#x51FB;&#x64CD;&#x4F5C;&#x5458;&#x5217;&#x8868;&#x6307;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x5458;&#x5220;&#x9664;&#x94FE;&#x63A5;&#x5373;&#x53EF;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5458;&#xFF0C;&#x5982;&#x679C;&#x64CD;&#x4F5C;&#x5458;&#x5DF2;&#x7ECF;&#x6709;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;&#xFF0C;&#x4E3A;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5458;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x505C;&#x7528;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x4FEE;&#x6539;&#x754C;&#x9762;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</p>
-<p><img src="http://qnstatic.toughcloud.net/FuafPbZEZxBQMFK4941ShkJ4n-a_" alt="&#x5220;&#x9664;"></p>
-<p><img src="http://qnstatic.toughcloud.net/FoT01C6EtTKs8P3Hqe4Hjz2IHogy" alt="&#x505C;&#x7528;"></p>
+                        <h1 id="linux-pptp-%E5%AF%B9%E6%8E%A5-%E7%A1%AC%E6%B4%BE%E4%BA%91%E5%AE%9E%E7%8E%B0vpn%E8%AE%A4%E8%AF%81">Linux PPTP &#x5BF9;&#x63A5; &#x786C;&#x6D3E;&#x4E91;&#x5B9E;&#x73B0;VPN&#x8BA4;&#x8BC1;</h1>
+<p>&#x4EE5; ubuntu14 &#x4E3A;&#x4F8B;&#xFF0C;&#x8C08;&#x8C08;PPTP&#x5BF9;&#x63A5;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;</p>
+<h3 id="%E5%AE%89%E8%A3%85pptpd%E6%9C%8D%E5%8A%A1">&#x5B89;&#x88C5;pptpd&#x670D;&#x52A1;</h3>
+<pre><code>sudo apt-get update -y
+sudo apt-get install -y pptpd iptables libfreeradius-client2 libfreeradius-client-dev
+</code></pre><p>&#x5982;&#x679C;/etc/radiusclient&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;radius&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x94FE;&#x63A5; </p>
+<pre><code>ln -s /usr/local/etc/radiusclient /etc/radiusclient
+</code></pre><h3 id="%E9%85%8D%E7%BD%AEpptpd%E4%B8%8Eradius">&#x914D;&#x7F6E;pptpd&#x4E0E;radius</h3>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /etc/pptpd.conf</p>
+<pre><code>option /etc/ppp/pptpd-options
+#debug
+#stimeout 10
+logwtmp
+#bcrelay eth1
+#delegate
+#connections 100
+localip 10.79.97.1
+remoteip 10.79.97.10-200
+</code></pre><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /etc/ppp/pptpd-options&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x91C7;&#x7528;&#x4E86;maschapv2&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#xFF0C;&#x5E76;&#x91C7;&#x7528;mppe128&#x4F4D;&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code>name pptpd
+refuse-pap
+refuse-chap
+refuse-mschap
+require-mschap-v2
+require-mppe-128
+
+# Network and Routing
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+proxyarp
+nodefaultroute
+
+#Logging
+#debug
+#dump
+#logfile /var/log/pptpd.log
+
+# Miscellaneous
+lock
+nobsdcomp
+novj
+novjccomp
+#nologfd
+
+plugin /usr/lib/pppd/2.4.5/radius.so
+plugin /usr/lib/pppd/2.4.5/radattr.so
+radius-config-file /etc/radiusclient/radiusclient.conf
+</code></pre><p>&#x914D;&#x7F6E;/etc/radiusclient/radiusclient.conf , &#x6CE8;&#x610F;&#x914D;&#x7F6E;authserver&#xFF0C;acctserver&#x4E3A;&#x4F60;&#x5B9E;&#x9645;&#x7684;radius&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F; nas-identifier &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5BF9;&#x63A5;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x4E3A;&#x5FC5;&#x9009;&#xFF0C;&#x5E76;&#x4E14;&#x6807;&#x8BC6;&#x662F;&#x786C;&#x6D3E;&#x4E91;&#x7CFB;&#x7EDF;&#x4E2D;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+</blockquote>
+<pre><code>nas-identifier mypptpd
+auth_order radius
+login_tries 4
+login_timeout 60
+nologin /etc/nologin
+authserver radius.toughctruc.net:1812
+acctserver radius.toughctruc.net:1813
+servers /etc/radiusclient/servers
+dictionary /etc/radiusclient/dictionary
+seqfile /var/run/radius.seq
+mapfile /etc/radiusclient/port-id-map
+default_realm
+radius_timeout 10
+radius_retries 3
+login_local /bin/login
+</code></pre><p>&#x5982;&#x679C; /etc/radiusclient/port-id-map &#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x7A7A;&#x6587;&#x4EF6;</p>
+<pre><code>echo &quot;&quot; &gt; /etc/radiusclient/port-id-map
+</code></pre><p>&#x914D;&#x7F6E;radius&#x670D;&#x52A1;&#x5668;&#x548C;&#x5171;&#x4EAB;&#x5BC6;&#x94A5; /etc/radiusclient/servers</p>
+<pre><code>radius.toughstruct.net     testing123
+</code></pre><p>&#x4E3A;&#x4E86;&#x652F;&#x6301;mschapv2&#x8BA4;&#x8BC1;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x5165; dictionary.microsoft&#x5B57;&#x5178;&#xFF0C; &#x4FEE;&#x6539;&#x5B57;&#x5178;&#x6587;&#x4EF6; /etc/radiusclient/dictionary&#xFF0C;&#x5728;&#x672B;&#x5C3E;&#x52A1;&#x5FC5;&#x52A0;&#x4E0A; &#xFF1A;</p>
+<pre><code>INCLUDE /etc/radiusclient/dictionary.microsoft
+</code></pre><p>&#x5982;&#x679C;&#x76EE;&#x5F55;&#x4E2D;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#xFF1A;<a href="https://raw.githubusercontent.com/talkincode/ToughVPN/master/radius/dictionary/dictionary.microsoft" target="_blank">https://raw.githubusercontent.com/talkincode/ToughVPN/master/radius/dictionary/dictionary.microsoft</a></p>
+<h3 id="%E4%BF%AE%E6%94%B9%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%86%85%E6%A0%B8%E8%BD%AC%E5%8F%91%E6%94%AF%E6%8C%81">&#x4FEE;&#x6539;&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;&#x5E76;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x8F6C;&#x53D1;&#x652F;&#x6301;</h3>
+<p>&#x6CE8;&#x610F;IP&#x5730;&#x5740;&#x4E0E;/etc/pptpd.conf&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x4E00;&#x81F4;</p>
+<pre><code>iptables -t nat -A POSTROUTING -s 10.79.97.0/24 -o eth0 -j MASQUERADE
+iptables -A FORWARD -s 10.79.97.0/24 -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -j TCPMSS --set-mss 1356
+</code></pre><p>&#x8BBE;&#x7F6E;&#x5185;&#x6838;&#x8F6C;&#x53D1;&#x652F;&#x6301;</p>
+<pre><code>sysctl -w net.ipv4.ip_forward=1
+</code></pre><p>&#x542F;&#x52A8;pptpd&#x670D;&#x52A1;</p>
+<pre><code>service pptpd start 
+</code></pre><h3 id="%E9%85%8D%E7%BD%AE%E7%A1%AC%E6%B4%BE%E4%BA%91%E8%AE%A1%E8%B4%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">&#x914D;&#x7F6E;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h3>
+<p>&#x5728;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x628A;PPTP&#x4F5C;&#x4E3A;&#x63A5;&#x5165;&#x8BBE;&#x5907;&#x52A0;&#x5165;&#xFF0C;&#x5728;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x91CC;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x63A5;&#x5165;&#x7C7B;&#x578B;&#x914D;&#x7F6E;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/FqNTF3XyYqkYGRGWe8OCErHQabFW" alt="nas"></p>
+<p>&#x53C2;&#x8003;&#x7528;&#x6237;&#x624B;&#x518C;&#x589E;&#x52A0;&#x8D44;&#x8D39;&#xFF0C;&#x65B0;&#x589E;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x62E8;&#x53F7;&#x6D4B;&#x8BD5;&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x62E8;&#x53F7;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7528;&#x6237;&#x6D88;&#x606F;&#x8DDF;&#x8E2A;&#x6216;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x67E5;&#x770B;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#xFF0C;&#x4F7F;&#x7528;mschapv2&#x8BA4;&#x8BC1;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x6D88;&#x606F;&#x5FC5;&#x5B9A;&#x4F1A;&#x6709;&#x4E24;&#x4E2A;&#x7279;&#x5B9A;&#x5C5E;&#x6027;&#xFF1A;MS-CHAP-Challenge &#x548C; MS-CHAP2-Response&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x6D88;&#x606F;&#x4E2D;&#x6CA1;&#x6709;&#x6B64;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x7684;&#x539F;&#x56E0;&#x662F;&#xFF1A;</p>
+<ul>
+<li>pptp&#x670D;&#x52A1;&#x6CA1;&#x6709;&#x914D;&#x7F6E;require-mschap-v2  &#x548C; require-mppe-128</li>
+<li>&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x4E0D;&#x652F;&#x6301;mppe</li>
+<li>&#x6CA1;&#x6709;&#x52A0;&#x5165;dictionary.microsoft</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8BD5;&#x7740;&#x4FEE;&#x6539; require-mppe-128 &#x4E3A; require-mppe</li>
+</ul>
+<h3 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h3>
+<p>&#x8981;&#x652F;&#x6301;mschapv2&#xFF0C;&#x9700;&#x8981;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x652F;&#x6301;MPPE&#xFF0C;&#x8F93;&#x5165;&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code>modprobe ppp-compress-18 &amp;&amp; echo ok
+</code></pre><p>&#x5982;&#x679C;&#x8F93;&#x51FA;ok&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x5728;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5F00;&#x542F;debug&#x6536;&#x96C6;&#x65E5;&#x5FD7;&#x8FDB;&#x884C;&#x8BCA;&#x65AD;&#xFF0C;&#x4EE5;&#x53CA;&#x914D;&#x5408;Radius&#x670D;&#x52A1;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x8DDF;&#x8E2A;&#x8FDB;&#x884C;&#x8BCA;&#x65AD;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x5E2E;&#x52A9;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="http://poptop.sourceforge.net/dox/" target="_blank">http://poptop.sourceforge.net/dox/</a></p>
 
                     
                     </section>
@@ -753,10 +834,10 @@
         </div>
 
         
-        <a href="../../pages/boms/params.html" class="navigation navigation-prev " aria-label="Previous page: 系统参数管理"><i class="fa fa-angle-left"></i></a>
+        <a href="../../pages/example/routeros_wlan_example.html" class="navigation navigation-prev " aria-label="Previous page: RouterOS 对接实现无线认证"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../pages/boms/modpwd.html" class="navigation navigation-next " aria-label="Next page: 修改操作员密码"><i class="fa fa-angle-right"></i></a>
+        <a href="../../pages/api/index.html" class="navigation navigation-next " aria-label="Next page: 硬派云API接口"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

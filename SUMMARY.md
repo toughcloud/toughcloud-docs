@@ -22,6 +22,7 @@
   - [资费套餐管理](pages/boms/product.md)
   - [用户信息管理](pages/boms/user.md)
   - [用户快速开户](pages/boms/useropen.md)
+  - [用户票据打印](pages/boms/print.md)
   - [微信公众号自助服务](pages/boms/mps.md)
 - [网络专线计费运营管理](pages/pns/toughpns.md)
 - [范例参考](pages/example/index.md)
