@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>硬派云API接口 | 硬派云用户文档</title>
+        <title>用户票据打印 | 硬派云用户文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -31,10 +31,10 @@
         
     
     
-    <link rel="next" href="../../pages/api/nas.html" />
+    <link rel="next" href="../../pages/boms/mps.html" />
     
     
-    <link rel="prev" href="../../pages/example/linux_pptpd.html" />
+    <link rel="prev" href="../../pages/boms/useropen.html" />
     
 
         
@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="8" data-basepath="../.." data-revision="Fri Aug 26 2016 18:24:19 GMT+0800 (CST)">
+    <div class="book" data-level="5.12" data-basepath="../.." data-revision="Fri Aug 26 2016 18:24:19 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -453,7 +453,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.12" data-path="pages/boms/print.html">
+        <li class="chapter active" data-level="5.12" data-path="pages/boms/print.html">
             
                 
                     <a href="../../pages/boms/print.html">
@@ -569,7 +569,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8" data-path="pages/api/index.html">
+        <li class="chapter " data-level="8" data-path="pages/api/index.html">
             
                 
                     <a href="../../pages/api/index.html">
@@ -741,45 +741,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E7%A1%AC%E6%B4%BE%E4%BA%91-api-%E6%8E%A5%E5%8F%A3">&#x786C;&#x6D3E;&#x4E91; API &#x63A5;&#x53E3;</h1>
-<p>&#x672C;&#x6587;&#x6863;&#x63CF;&#x8FF0;&#x4E86;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x7684;&#x63A5;&#x53E3;&#x89C4;&#x8303;&#xFF0C;&#x63D0;&#x4F9B;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x8005;&#x5F00;&#x53D1;&#x53C2;&#x8003;&#x3002;&#x7B2C;&#x4E09;&#x65B9;&#x7CFB;&#x7EDF;&#x6309;&#x6B64;&#x63A5;&#x53E3;&#x89C4;&#x8303;&#x5B9E;&#x73B0;&#x54CD;&#x5E94;&#x529F;&#x80FD;&#xFF0C;&#x5B8C;&#x6210;&#x4E0E;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x7684;&#x5BF9;&#x63A5;&#x3002;</p>
-<ul>
-<li>&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;</li>
-</ul>
-<p>&#x786C;&#x6D3E;&#x4E91;&#x7AEF;&#x8BA4;&#x8BC1;&#x8BA1;&#x8D39;&#x5F15;&#x64CE;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x6807;&#x51C6;&#x7684;Radius&#x534F;&#x8BAE;&#xFF0C;&#x4EE5;&#x53CA;&#x652F;&#x6301;Radius&#x534F;&#x8BAE;&#x6269;&#x5C55;&#xFF0C;&#x90E8;&#x7F72;&#x4E0E;&#x786C;&#x6D3E;&#x4E91;&#x7AEF;&#xFF0C;&#x63D0;&#x4F9B;&#x6807;&#x51C6; Radius &#x534F;&#x8BAE;&#x63A5;&#x53E3;&#xFF0C;&#x4EE5;&#x53CA; http &#x6570;&#x636E;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x3002;</p>
-<ul>
-<li>&#x7B2C;&#x4E09;&#x65B9;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF; </li>
-</ul>
-<p>&#x65E0;&#x9700;&#x5B9E;&#x73B0;Radius&#x534F;&#x8BAE;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x786C;&#x6D3E;&#x4E91;&#x8BA4;&#x8BC1;&#x8BA1;&#x8D39;&#x5F15;&#x64CE;&#x63A5;&#x53E3;&#x89C4;&#x8303;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;AAA&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x4F01;&#x4E1A;&#x73B0;&#x6709;ERP&#xFF0C;CRM&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#x6539;&#x9020;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x8BA4;&#x8BC1;&#x8BA1;&#x8D39;&#x6388;&#x6743;&#x7684;&#x652F;&#x6301;&#x3002;</p>
-<h2 id="%E5%8D%8F%E8%AE%AE%E8%A7%84%E8%8C%83">&#x534F;&#x8BAE;&#x89C4;&#x8303;</h2>
-<ul>
-<li>&#x534F;&#x8BAE;&#x91C7;&#x7528;&#x57FA;&#x4E8E;http restfull&#x98CE;&#x683C;&#x7684;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x3002;</li>
-<li>&#x6D88;&#x606F;&#x53D1;&#x8D77;&#x65B9;&#xFF1A;&#x7B2C;&#x4E09;&#x65B9;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
-<li>&#x6D88;&#x606F;&#x63A5;&#x53D7;&#x65B9;&#xFF1A;&#x786C;&#x6D3E;&#x4E91;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x3002;</li>
-<li>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5730;&#x5740;&#xFF1A;&#x786C;&#x6D3E;&#x4E91;&#x8BA4;&#x8BC1;&#x8BA1;&#x8D39;&#x5F15;&#x64CE;&#x5E73;&#x53F0;&#x63D0;&#x4F9B;&#x3002;</li>
-<li>&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;HTTP GET/POST&#xFF0C;&#x652F;&#x6301;&#x6807;&#x51C6; HTTP 1.1 &#x534F;&#x8BAE;&#x3002;</li>
-<li>&#x6D88;&#x606F;&#x62A5;&#x6587;&#x7F16;&#x7801;&#xFF1A;UTF-8</li>
-<li>&#x63A5;&#x53E3;&#x9274;&#x6743;&#xFF1A;MD5&#x7B7E;&#x540D;&#xFF0C;md5(&#x5171;&#x4EAB;&#x5BC6;&#x94A5;+&#x6392;&#x5E8F;&#x7684;&#x53C2;&#x6570;&#x503C;+&#x968F;&#x673A;&#x5B57;&#x7B26;&#x4E32;), &#x7B7E;&#x540D;&#x6821;&#x9A8C;&#x662F;&#x53CC;&#x5411;&#x7684;&#xFF0C;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x65B9;&#x5BF9;&#x8BF7;&#x6C42;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#xFF0C;&#x540C;&#x65F6;&#x9700;&#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7B7E;&#x540D;&#x8FD4;&#x56DE;&#xFF0C;&#x6D88;&#x606F;&#x53D1;&#x8D77;&#x65B9;&#x5BF9;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x7684;&#x7B7E;&#x540D;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;</li>
-</ul>
-<h2 id="%E7%AD%BE%E5%90%8D%E4%BB%A3%E7%A0%81%E5%8F%82%E8%80%83">&#x7B7E;&#x540D;&#x4EE3;&#x7801;&#x53C2;&#x8003;</h2>
-<h3 id="python">Python</h3>
-<pre><code>from hashlib import md5
-def make_sign(api_secret, params=[]):
-    &quot;&quot;&quot;
-        &gt;&gt;&gt; make_sign(&quot;testsecret&quot;,params={&apos;name&apos;:&apos;test&apos;,&apos;attrname&apos;:&apos;attrvalue&apos;}.values())
-        &apos;8C3CD49F386485E3C34307E29ABC6877&apos;
-    &quot;&quot;&quot;
-    _params = [unicode(p,&apos;utf-8&apos;) for p in params if p is not None]
-    _params.sort()
-    _params.insert(0, api_secret)
-    strs = &apos;&apos;.join(_params)
-    mds = md5(strs.encode(&apos;utf-8&apos;)).hexdigest()
-    return mds.upper()
+                        <h1 id="%E7%A5%A8%E6%8D%AE%E6%89%93%E5%8D%B0%E5%8A%9F%E8%83%BD">&#x7968;&#x636E;&#x6253;&#x5370;&#x529F;&#x80FD;</h1>
+<p>&#x786C;&#x6D3E;&#x4E91;&#x7F51;&#x7EDC;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x4E86;&#x7B2C;&#x4E09;&#x65B9;&#x5546;&#x4E1A;&#x6253;&#x5370;&#x63A7;&#x4EF6;(LODOP)&#x5B9E;&#x73B0;&#x7968;&#x636E;&#x6253;&#x5370;&#xFF0C;&#x6839;&#x636E;&#x6253;&#x5370;&#x63A7;&#x4EF6;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x8BA1;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x7968;&#x636E;&#x6A21;&#x677F;&#xFF0C;&#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x5728;&#x7EBF;&#x8BBE;&#x8BA1;&#x6A21;&#x677F;&#x3002;</p>
+<blockquote>
+<p>&#x5173;&#x4E8E;&#x6253;&#x5370;&#x63A7;&#x4EF6;&#xFF1A;&#x8BE5;&#x6253;&#x5370;&#x63A7;&#x4EF6;&#x53EA;&#x9650;&#x4E8E;&#x5728; Windows &#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#xFF0C;&#x6839;&#x636E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x5B89;&#x88C5;32&#x4F4D;&#x6216;64&#x4F4D;&#x7684;&#x63A7;&#x4EF6;&#x7248;&#x672C;&#x3002;&#x63A7;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://www.lodop.net/download.html,&#x6839;&#x636E;&#x60A8;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x4E0B;&#x8F7D;&#x3002;" target="_blank">http://www.lodop.net/download.html,&#x6839;&#x636E;&#x60A8;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x4E0B;&#x8F7D;&#x3002;</a></p>
+</blockquote>
+<h2 id="%E7%A5%A8%E6%8D%AE%E6%A8%A1%E7%89%88%E7%AE%A1%E7%90%86">&#x7968;&#x636E;&#x6A21;&#x7248;&#x7BA1;&#x7406;</h2>
+<p>&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x7968;&#x636E;&#x6A21;&#x677F;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8BBE;&#x8BA1;&#x72EC;&#x6709;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; lodop &#x63D0;&#x4F9B;&#x7684;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x7968;&#x636E;&#x6A21;&#x677F;&#x5FC5;&#x987B;&#x5173;&#x8054;&#x76F8;&#x5173;&#x7684;&#x53D7;&#x7406;&#x7C7B;&#x578B;&#x624D;&#x80FD;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/FlEuxnTV-aELb3_x9g8MWtVjtLmY" alt="&#x7968;&#x636E;&#x6A21;&#x7248;"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x5173;&#x8054;&#x76F8;&#x5173;&#x7684;&#x53D7;&#x7406;&#x7C7B;&#x578B;&#xFF0C;&#x652F;&#x6301;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x53D7;&#x7406;&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x7968;&#x636E;&#x6A21;&#x7248;&#xFF0C;&#x6216;&#x63D0;&#x4F9B;&#x591A;&#x5957;&#x7968;&#x636E;&#x6A21;&#x7248;&#x4EE5;&#x4F9B;&#x9009;&#x62E9;&#x3002;</p>
+</blockquote>
+<p><img src="http://qnstatic.toughcloud.net/FjOVaUq9ObQjW-QdniaBOxv2pI1M" alt="&#x7968;&#x636E;&#x6A21;&#x7248;&#x4FEE;&#x6539;"></p>
+<h2 id="%E7%A5%A8%E6%8D%AE%E6%A8%A1%E7%89%88%E8%AE%BE%E8%AE%A1">&#x7968;&#x636E;&#x6A21;&#x7248;&#x8BBE;&#x8BA1;</h2>
+<p>&#x5728;&#x7968;&#x636E;&#x7BA1;&#x7406;&#x5217;&#x8868;&#xFF0C;&#x70B9;&#x51FB;&#x8BBE;&#x8BA1;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x51FA;&#x7968;&#x636E;&#x6A21;&#x7248;&#x8BBE;&#x8BA1;&#x754C;&#x9762;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/FtfNYs-rtFs7qN4FIqMpnlQhPEQC" alt="&#x7968;&#x636E;&#x8BBE;&#x8BA1;"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x53C2;&#x8003;LODOP&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x53C2;&#x8003;&#x624B;&#x518C;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4E0D;&#x660E;&#x767D;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x53EF;&#x8BAE;&#x8054;&#x7CFB;&#x786C;&#x6D3E;&#x4E91;&#x5BA2;&#x670D;&#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x60A8;&#x5B8C;&#x6210;&#x7968;&#x636E;&#x6A21;&#x7248;&#x7684;&#x8BBE;&#x8BA1;&#x540E;&#xFF0C;&#x9009;&#x62E9;&#x751F;&#x6210;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;(&#x5373;&#x7968;&#x636E;&#x6A21;&#x7248;&#x5185;&#x5BB9;)&#xFF0C;&#x62F7;&#x8D1D;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6A21;&#x7248;&#x5E76;&#x7C98;&#x8D34;&#x5185;&#x5BB9;&#x5E76;&#x4FDD;&#x5B58;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/FgvfqhgwHJZ2PqUOIKFtcOLZRj-V" alt="&#x751F;&#x6210;&#x4EE3;&#x7801;"></p>
+<h2 id="%E7%A5%A8%E6%8D%AE%E6%89%93%E5%8D%B0">&#x7968;&#x636E;&#x6253;&#x5370;</h2>
+<p>&#x5728;&#x7528;&#x6237;&#x4EA4;&#x6613;&#x67E5;&#x8BE2;&#x754C;&#x9762;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6253;&#x5370;&#x94FE;&#x63A5;&#xFF0C;&#x70B9;&#x51FB;&#x6253;&#x5370;&#x94FE;&#x63A5;&#xFF0C;&#x8FDB;&#x5165;&#x7968;&#x636E;&#x6253;&#x5370;&#x754C;&#x9762;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/FgMg96Zpl_THxEqPgY0zYNXroz8I" alt="&#x4EA4;&#x6613;&#x5217;&#x8868;"></p>
+<p><img src="http://qnstatic.toughcloud.net/FgayWfxvJeqPLeZ01yip5djOXSpY" alt="&#x7968;&#x636E;&#x6253;&#x5370;"></p>
+<p>&#x9009;&#x62E9;&#x7968;&#x636E;&#x6A21;&#x7248;&#xFF0C;&#x70B9;&#x51FB;&#x6253;&#x5370;&#x6309;&#x94AE;&#xFF0C;&#x5373;&#x53EF;&#x5F39;&#x51FA;&#x6253;&#x5370;&#x9884;&#x89C8;&#x7A97;&#x53E3;&#xFF0C;&#x7EE7;&#x7EED;&#x5B8C;&#x6210;&#x6253;&#x5370;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="http://qnstatic.toughcloud.net/Fvkey0PyeWwcbyg2jAOKxpDv8pfk" alt="&#x6253;&#x5370;&#x9884;&#x89C8;"></p>
 
-if __name__ == &apos;__main__&apos;:
-    import doctest
-    doctest.testmod()
-</code></pre>
                     
                     </section>
                 
@@ -789,10 +778,10 @@ if __name__ == &apos;__main__&apos;:
         </div>
 
         
-        <a href="../../pages/example/linux_pptpd.html" class="navigation navigation-prev " aria-label="Previous page: Linux pptpd 对接实现 VPN 认证"><i class="fa fa-angle-left"></i></a>
+        <a href="../../pages/boms/useropen.html" class="navigation navigation-prev " aria-label="Previous page: 用户快速开户"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../pages/api/nas.html" class="navigation navigation-next " aria-label="Next page: 服务商接入设备接口"><i class="fa fa-angle-right"></i></a>
+        <a href="../../pages/boms/mps.html" class="navigation navigation-next " aria-label="Next page: 微信公众号自助服务"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
