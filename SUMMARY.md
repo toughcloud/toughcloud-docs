@@ -27,6 +27,7 @@
 - [范例参考](pages/example/index.md)
   - [RouterOS 对接实现 PPPOE 计费](pages/example/routeros_pppoe_example.md)
   - [RouterOS 对接实现无线认证](pages/example/routeros_wlan_example.md)
+  - [Linux pptpd 对接实现 VPN 认证](pages/example/linux_pptpd.md)
 - [硬派云API接口](pages/api/index.md)
   - [服务商接入设备接口](pages/api/nas.md)
   - [RADIUS 用户接口](pages/api/user.md)

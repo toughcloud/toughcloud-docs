@@ -16,7 +16,7 @@
 
 ![wechatconfig](http://qnstatic.toughcloud.net/Fh3PXR18gIawDwQgey3fGXsdd8AC)
 
-- 微信公众号接口地址：由计费管理系统提供，格式如 http://mp.toughcloud.net/mps/{isp_code}, 将改地址填入微信配置。
+- 微信公众号接口地址：由计费管理系统提供，格式如 https://mp.toughcloud.net/mps/{isp_code}, 将改地址填入微信配置。
 - 微信公众号令牌(Token)：该参数在计费管理系统先填写，再配置到微信公众号管理配置里。
 - 微信公众号应用ID：从微信公众号配置里拷贝过来。
 - 微信公众号应用密钥：从微信公众号配置里拷贝过来。
@@ -40,31 +40,31 @@
 
 - 常见问题
 
-http://mp.toughcloud.net/mps/{isp_code}/faqs
+https://mp.toughcloud.net/mps/{isp_code}/faqs
 
 页面为静态内容，您可以自己链接到自定义的链接去。
 
 - 资费套餐
 
-http://mp.toughcloud.net/mps/{isp_code}/products
+https://mp.toughcloud.net/mps/{isp_code}/products
 
 显示系统中对外发布的服务资费列表，在支持微信支付的条件下可实现在线订购。
 
 - 账号绑定(查询)
 
-http://mp.toughcloud.net/mps/{isp_code}/userbind
+https://mp.toughcloud.net/mps/{isp_code}/userbind
 
 提供用户上网帐号绑定功能，如果已经绑定则直接打开用户帐号信息页面，在支持微信支付的条件下可实现在线续费。
 
 - 交易查询(需要完成绑定)
 
-http://mp.toughcloud.net/mps/{isp_code}/userorder
+https://mp.toughcloud.net/mps/{isp_code}/userorder
 
 提供用户订购纪录查询，含缴费信息数据。
 
 - 密码修改(需要完成绑定)
 
-http://mp.toughcloud.net/mps/{isp_code}/useruppw
+https://mp.toughcloud.net/mps/{isp_code}/useruppw
 
 提供用户密码修改功能
 
