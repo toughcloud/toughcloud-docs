@@ -1,8 +1,0 @@
-{
-    "name": "toughcloud",
-    "version": "0.0.0",
-    "dependencies": {
-        "gitbook-plugin-prism": "*",
-        "gitbook-plugin--highlight": "*"
-    }
-}
