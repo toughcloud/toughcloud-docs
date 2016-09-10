@@ -1,18 +1,30 @@
 # Linux PPTP 对接 硬派云实现VPN认证
 
-以 ubuntu14 为例，谈谈PPTP对接硬派云计费
+## 安装pptpd服务
 
-### 安装pptpd服务
+- ubuntu14
 
     sudo apt-get update -y
     sudo apt-get install -y pptpd iptables libfreeradius-client2 libfreeradius-client-dev
+
+### centos7 
+
+    yum update -y
+    yum install -y pptpd iptables gcc make
+    cd /usr/local/src &&\
+      wget ftp://ftp.freeradius.org/pub/freeradius/freeradius-client-1.1.7.tar.gz && \
+      tar xzvf freeradius-client-1.1.7.tar.gz && \
+      cd  /usr/local/src/freeradius-client-1.1.7 && \
+      ./configure --prefix=/usr/local && \
+      make && make install
+
 
 如果/etc/radiusclient目录不存在，建立一个radius配置目录链接 
 
     ln -s /usr/local/etc/radiusclient /etc/radiusclient
 
 
-### 配置pptpd与radius
+## 配置pptpd与radius
 
 修改配置文件 /etc/pptpd.conf
 
@@ -22,7 +34,7 @@
     logwtmp
     #bcrelay eth1
     #delegate
-    #connections 100
+    connections 200
     localip 10.79.97.1
     remoteip 10.79.97.10-200
 
@@ -57,17 +69,21 @@
     plugin /usr/lib/pppd/2.4.5/radattr.so
     radius-config-file /etc/radiusclient/radiusclient.conf
 
+
+> 注意，在 centos7下是 /usr/lib64/pppd/2.4.5/radius.so 和 /usr/lib64/pppd/2.4.5/radattr.so
+
+
 配置/etc/radiusclient/radiusclient.conf , 注意配置authserver，acctserver为你实际的radius服务器地址和端口。
 
-> 注意 nas-identifier 的配置，对接硬派云计费系统，该选项为必选，并且标识是硬派云系统中全局唯一的。
+> 注意 nas_identifier 的配置，对接硬派云计费系统，该选项为必选，并且标识是硬派云系统中全局唯一的。
 
-    nas-identifier mypptpd
+    nas_identifier mypptpd1
     auth_order radius
     login_tries 4
     login_timeout 60
     nologin /etc/nologin
-    authserver radius.toughctruc.net:1812
-    acctserver radius.toughctruc.net:1813
+    authserver 123.59.85.22:61432
+    acctserver 123.59.85.22:61672
     servers /etc/radiusclient/servers
     dictionary /etc/radiusclient/dictionary
     seqfile /var/run/radius.seq
@@ -83,7 +99,7 @@
 
 配置radius服务器和共享密钥 /etc/radiusclient/servers
 
-    radius.toughstruct.net     testing123
+    123.59.85.22 secret
 
 为了支持mschapv2认证，需要加入 dictionary.microsoft字典， 修改字典文件 /etc/radiusclient/dictionary，在末尾务必加上 ：
 
@@ -91,22 +107,24 @@
 
 如果目录中没有这个字典，可以下载：[https://raw.githubusercontent.com/talkincode/ToughVPN/master/radius/dictionary/dictionary.microsoft][1]
 
-### 修改防火墙配置并修改内核转发支持
-
-注意IP地址与/etc/pptpd.conf中配置的一致
-
-    iptables -t nat -A POSTROUTING -s 10.79.97.0/24 -o eth0 -j MASQUERADE
-    iptables -A FORWARD -s 10.79.97.0/24 -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -j TCPMSS --set-mss 1356
+## 修改防火墙配置并修改内核转发支持
 
 设置内核转发支持
 
     sysctl -w net.ipv4.ip_forward=1
 
+设置 iptables NAT
+
+    iptables -t nat -A POSTROUTING -s 10.79.97.0/24 -o eth0 -j MASQUERADE
+    iptables -A FORWARD -s 10.79.97.0/24 -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -j TCPMSS --set-mss 1356
+
+> 注意IP地址与/etc/pptpd.conf中配置的一致
+
 启动pptpd服务
 
     service pptpd start 
 
-### 配置硬派云计费管理系统
+## 配置硬派云计费管理系统
 
 在硬派云计费管理系统中，需要把PPTP作为接入设备加入，在管理系统里增加一个标准接入类型配置即可。
 
@@ -122,7 +140,7 @@
 - 如果没有上面的问题，试着修改 require-mppe-128 为 require-mppe
 
 
-### 注意事项
+## 注意事项
 
 要支持mschapv2，需要系统内核支持MPPE，输入指令：
 
