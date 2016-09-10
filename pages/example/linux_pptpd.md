@@ -2,7 +2,7 @@
 
 ## 安装pptpd服务
 
-- ubuntu14
+### ubuntu14
 
     sudo apt-get update -y
     sudo apt-get install -y pptpd iptables libfreeradius-client2 libfreeradius-client-dev
